@@ -69,6 +69,17 @@ int main()
 	// because TDynamicArray has no data again.
 	//test_da[0] = me;
 
+	test_da.push_back(SPerson(L"Jesus", 29));
+	test_da.push_back(SPerson(L"Tommy", 6));
+	test_da.push_back(SPerson(L"Sara", 24));
+	test_da.push_back(SPerson(L"Sofia", 29));
+	test_da.push_back(SPerson(L"Lucas", 28));
+
+	for (SPerson iter : test_da)
+	{
+		std::wcout << L"ITER: " << iter.name << std::endl;
+	}
+
 	system("pause");
 
 	return 0;

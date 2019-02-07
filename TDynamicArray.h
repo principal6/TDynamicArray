@@ -199,6 +199,44 @@ namespace JWENGINE
 			}
 		}
 
+		// begin() for for iterator
+		auto begin()->T*
+		{
+			return &m_pData[0];
+		}
+
+		// const begin() for for iterator
+		auto begin() const->const T*
+		{
+			return &m_pData[0];
+		}
+
+		// end() for for iterator
+		auto end()->T*
+		{
+			if (m_Size)
+			{
+				return &m_pData[m_Size];
+			}
+			else
+			{
+				return &m_pData[0];
+			}
+		}
+
+		// const end() for for iterator
+		auto end() const->const T*
+		{
+			if (m_Size)
+			{
+				return &m_pData[m_Size];
+			}
+			else
+			{
+				return &m_pData[0];
+			}
+		}
+
 	private:
 		// Private function that allocates memory space for our dynamic array.
 		void NewArray(size_t Capacity)
